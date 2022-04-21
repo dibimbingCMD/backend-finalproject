@@ -5,6 +5,7 @@ module.exports = (mongoose) => {
             body: String,
             category: Array,
             club: Array,
+            image: String,
             createdBy: String
         },
         {timestamps: true}

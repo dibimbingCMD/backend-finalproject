@@ -8,5 +8,6 @@ db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.news = require('./news.model')(mongoose);
 db.users = require('./users.model')(mongoose);
+db.club = require('./club.model')(mongoose);
 
 module.exports = db;
