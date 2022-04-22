@@ -47,6 +47,33 @@ exports.findOne = (req, res) => {
     });
 }
 
+exports.searchNews = (req, res) => {
+
+    const search = req.body.searchKeyword
+    
+    News.find({
+        $or: [
+            {'title': {'$regex': search}},
+            {
+            $or: [
+                {'body': {'$regex': search}},
+                {
+                $or: [
+                    {'category': {'$regex': search}},
+                    {'club': {'$regex': search}}
+                ]}
+            ]}
+        ]
+    })
+    .then((result) => {
+        res.send(result)
+    }).catch((err) => {
+        res.status(409).send({
+            message: err.message || "Some error while show news."
+        })
+    });
+}
+
 exports.findUser = (req, res) => {
     const id = req.params._id
 

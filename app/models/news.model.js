@@ -10,7 +10,7 @@ module.exports = (mongoose) => {
         },
         {timestamps: true}
     );
-
+    
     const News = mongoose.model("news", schema)
     return News
 };
