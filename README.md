@@ -1,8 +1,5 @@
-# backend-eplnews
 
-# backend-eplnews
-
-## **1. Setup Node.js Backend Project**
+## **1. Setup Node.js Backend Final Project**
 
 - Open **_app.js_** & edit these lines to configure your database:
   ```javascript
